@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجلة Egy-IC كوميكس - العدد الثاني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Changa:wght@800&display=swap" rel="stylesheet">
+    <style>
+        :root { --comic-red: #e62429; --comic-yellow: #ffcc00; --comic-blue: #0066cc; --comic-black: #1a1a1a; --paper: #fdfbf7; }
+        body { background-color: #1e293b; margin: 0; padding: 20px; font-family: 'Cairo', sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .comic-page { background-color: var(--paper); width: 100%; max-width: 1000px; border: 8px solid var(--comic-black); padding: 15px; box-shadow: 10px 10px 0px rgba(0,0,0,0.5); border-radius: 10px; }
+        .comic-header { text-align: center; border-bottom: 8px solid var(--comic-black); margin-bottom: 25px; background: var(--comic-blue); color: white; padding: 40px 10px; border-radius: 5px; position: relative; }
+        .comic-title { font-family: 'Changa', sans-serif; font-size: clamp(40px, 8vw, 80px); margin: 0; line-height: 1.1; text-shadow: 4px 4px 0px var(--comic-black); }
+        .comic-subtitle { font-size: clamp(16px, 3vw, 24px); background: var(--comic-yellow); color: var(--comic-black); display: inline-block; padding: 5px 15px; border: 3px solid var(--comic-black); margin-top: 15px; transform: rotate(-2deg); }
+        .panels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .panel { border: 5px solid var(--comic-black); background-color: white; position: relative; display: flex; flex-direction: column; gap: 15px; padding: 40px 20px 20px 20px; box-shadow: 5px 5px 0 rgba(0,0,0,0.2); border-radius: 8px; overflow: hidden; }
+        .panel-bg-1 { background: #ffebee; } .panel-bg-2 { background: #e8eaf6; } .panel-bg-3 { background: #fff8e1; grid-column: 1 / -1; } .panel-bg-4 { background: #e0f2f1; } .panel-bg-5 { background: #fce4ec; }
+        .caption { background-color: var(--comic-yellow); border: 3px solid var(--comic-black); padding: 5px 15px; font-weight: 900; font-size: 16px; position: absolute; top: 0; right: 0; border-radius: 0 0 0 10px; z-index: 10; }
+        .speech-bubble { background: white; border: 4px solid var(--comic-black); border-radius: 15px; padding: 15px; font-size: 18px; font-weight: bold; text-align: center; position: relative; z-index: 5; box-shadow: 3px 3px 0 rgba(0,0,0,0.1); }
+        .speech-bubble::after, .speech-bubble::before { content: ''; position: absolute; left: 50%; border-style: solid; transform: translateX(-50%); }
+        .speech-bubble::after { bottom: -15px; border-width: 15px 15px 0 0; border-color: white transparent transparent transparent; z-index: 2; }
+        .speech-bubble::before { bottom: -20px; border-width: 19px 19px 0 0; border-color: var(--comic-black) transparent transparent transparent; z-index: 1; }
+        .meme-img-container { display: flex; justify-content: center; align-items: flex-end; flex-grow: 1; }
+        .meme-img { max-width: 100%; height: auto; max-height: 250px; border: 4px solid var(--comic-black); border-radius: 5px; object-fit: cover; }
+        .nav-btn { display: inline-block; background: var(--comic-red); color: white; text-decoration: none; padding: 15px 30px; font-family: 'Changa', sans-serif; font-size: 24px; border: 5px solid var(--comic-black); border-radius: 10px; box-shadow: 5px 5px 0 var(--comic-black); margin-top: 30px; transition: 0.2s; }
+        .nav-btn:hover { transform: translateY(3px); box-shadow: 2px 2px 0 var(--comic-black); }
+        @media (max-width: 768px) { .panel-bg-3 { grid-column: auto; } }
+    </style>
+</head>
+<body>
+    <div class="comic-page">
+        <div class="comic-header">
+            <h1 class="comic-title">مكافحة العدوى</h1>
+            <div class="comic-subtitle">فوضى الطوارئ والأقسام الداخلية!</div>
+        </div>
+
+        <div class="panels-grid">
+            <div class="panel panel-bg-1"><div class="caption">انسكابات الدم</div><div class="speech-bubble">"بتمسح الدم اللي على الأرض بالشرشوبة؟ يا عم لازم تغطيه بفوطة وتحط كلور 5000 جزء 10 دقايق.. إنت بتدهن المستشفى بكتيريا؟!"</div><div class="meme-img-container"><img src="karim.jpg" alt="كريم عبد العزيز" class="meme-img"></div></div>
+            <div class="panel panel-bg-2"><div class="caption">موبايل وجوانتي</div><div class="speech-bubble">"الدكتور لسه مغير جرح العيان، ومسك الموبايل بنفس الجوانتي عشان يرد على الواتساب.. الموبايل بقى مزرعة يا زعيم!"</div><div class="meme-img-container"><img src="adel.jpg" alt="عادل إمام" class="meme-img"></div></div>
+            <div class="panel panel-bg-3"><div class="caption">في العنابر الداخلية...</div><div class="speech-bubble" style="transform: rotate(-1deg);">"بتنفض ملاية السرير كأنك بتنفض سجادة الصالة في العيد؟ العنابر كلها خدت شاور بكتيريا.. تصدق عديتني؟!"</div><div class="meme-img-container"><img src="boha.jpg" alt="بوحة" class="meme-img" style="max-height: 300px;"></div></div>
+            <div class="panel panel-bg-4"><div class="caption">تحضير الأدوية</div><div class="speech-bubble">"سايب سن السرنجة مغروز في غطاء الفايل عشان تسحب منه براحتك؟ الفايل اتلوث والتعقيم راح في داهية!"</div><div class="meme-img-container"><img src="bassem.jpg" alt="باسم سمرة" class="meme-img"></div></div>
+            <div class="panel panel-bg-5"><div class="caption">فصل النفايات</div><div class="speech-bubble">"سرنجة في الكيس الأسود، وكيس شيبسي في الأحمر، والسيفتي بوكس فيه قطنة.. إحنا بنلخبط الميكروب؟!"</div><div class="meme-img-container"><img src="helmy.jpg" alt="أحمد حلمي" class="meme-img"></div></div>
+        </div>
+        
+        <!-- زرار الرجوع للعدد الأول -->
+        <div style="text-align: center;">
+            <a href="index.html" class="nav-btn">➡️ رجوع للعدد الأول: الرعاية</a>
+        </div>
+    </div>
+</body>
+</html>
