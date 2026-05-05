@@ -1,1 +1,0 @@
-# egy-ic-portal
